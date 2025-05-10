@@ -1,4 +1,3 @@
-// test/llm-service-connectivity.test.js
 
 const axios = require('axios');
 require('dotenv').config(); // Load environment variables from .env file
