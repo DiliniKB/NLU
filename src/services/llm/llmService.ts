@@ -44,6 +44,7 @@ const responseCache = new Map<string, any>();
 // Process text with LLM to classify intent and extract entities
 export async function processWithLLM(userInput: string, context?: any): Promise<any> {
   // Create cache key from input and context
+  // todo: check the usage
   const cacheKey = `${userInput}:${JSON.stringify(context || {})}`;
   
   // Check cache first

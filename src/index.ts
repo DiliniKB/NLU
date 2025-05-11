@@ -17,6 +17,10 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// MongoDB connection
+import connectDatabase from './services/database/mongoConnection';
+connectDatabase();
+
 // Routes
 app.use('/api/nlu', nluRoutes);
 

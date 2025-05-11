@@ -23,7 +23,8 @@ export async function processInput(userId: string, message: string) {
     if (intent.primary === 'cycle_tracking' && 
         (intent.subtype === 'period_start_logging' || intent.subtype === 'period_tracking')) {
       cycleData = {
-        periodStart: processedEntities.temporal.dates[0]
+        periodStart: processedEntities.temporal.dates[0],
+        cyclePhase: ''
       };
     }
   }
